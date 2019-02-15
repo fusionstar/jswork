@@ -1,0 +1,45 @@
+
+.fa{
+ font-size: 25px;
+ color: white
+}
+
+.button_on{
+  color: #000000 !important
+}
+
+button{
+ background-color:#dd5193;
+ border: none;
+ margin-right: 10px
+}
+
+#video-player{
+   max-width: 1040px;
+   margin: 0 auto;
+   height: auto; 
+   background-color:#dd5193;
+}
+
+#site-video{
+width: 100%;
+}
+
+#video-player-controls{
+ background-color: #dd5193;
+ padding: 10px;
+ max-width: 500px;
+ width: 100%;
+ margin: 0 auto
+}
+
+progress {
+	color:#ffffff !important;
+	font-size:12px;
+	width:172px;
+	height:16px;
+	border:none;
+	margin-right:5px;
+	background-color:#ffffff;
+}
+progress::-moz-progress-bar { background:#dd5193 }

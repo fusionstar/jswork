@@ -3,7 +3,8 @@
 	<head>
 	  <meta charset='utf-8' />
 	  <title>Prom Girl Blog</title>
-	  <link href="css/" rel="stylesheet">
+		<link href="css/video.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	</head>
 	<body>
 		<div id="video-player">
@@ -12,9 +13,14 @@
 			   <source src="videos/Try-On-The-Hottest-Prom-2018-Dress-Trends-With-PromGirl.webm" type="video/webm">
 			</video>
 			<div id="video-player-controls">
-              <button id="play-pause-button" class="play" title="play"></button>
-              
-            </div>
+					    <button id='replay-button' class='replay'><i class="fa fas fa-redo"></i></button>
+              <button id="play-pause-button" class="play"><i class=" fa fas fa-play"></i></button>
+							<button id='stop-button' class='stop'><i class="fa fas fa-stop"></i></button>
+							<button id='volume-inc-button' class='volume-plus volume'><i class="fa fas fa-volume-up"></i></button>
+							<button id='volume-dec-button' class='volume-minus volume'><i class="fa fas fa-volume-down"></i></button>
+							<button id="mute-button" class="mute"><i class="fa fas fa-volume-mute"></i></button>
+							<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+			</div>
 		</div>
 		<script src="js/video-player.js"></script>
 	</body>
