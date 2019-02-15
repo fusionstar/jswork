@@ -8,6 +8,32 @@
   color: #000000 !important
 }
 
+.container{
+max-width: 1040px;
+width: 100%;
+margin: 0 auto
+}
+
+p{
+font-size: 14px;
+line-height: 25px;
+font-family: Arial, Helvetica, sans-serif; 
+}
+
+h1{
+margin-top:50px;
+margin-bottom: 30px;
+font-size: 35px;
+line-height: 40px;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: uppercase;
+text-align: center
+}
+
+img{
+width: 100%
+}
+
 button{
  background-color:#dd5193;
  border: none;
@@ -19,6 +45,7 @@ button{
    margin: 0 auto;
    height: auto; 
    background-color:#dd5193;
+   margin-bottom: 30px
 }
 
 #site-video{
@@ -27,7 +54,8 @@ width: 100%;
 
 #video-player-controls{
  background-color: #dd5193;
- padding: 10px;
+ padding-top: 10px;
+ padding-bottom: 10px;
  max-width: 500px;
  width: 100%;
  margin: 0 auto
@@ -40,6 +68,37 @@ progress {
 	height:16px;
 	border:none;
 	margin-right:5px;
-	background-color:#ffffff;
+	background-color:#000000;
 }
 progress::-moz-progress-bar { background:#dd5193 }
+progress::-webkit-progress-value { background: #ffffff; }
+::-webkit-progress-bar {
+    background-color: #000000;
+  }
+
+@media (max-width: 991px){
+    .fa{
+        font-size: 15px;
+        color: white
+    }
+
+    #video-player-controls{
+        background-color: #dd5193;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 500px;
+        width: 90%;
+        margin: 0 auto
+       }
+       
+       progress {
+           color:#ffffff !important;
+           font-size:12px;
+           width:72px;
+           height:16px;
+           border:none;
+           margin-right:5px;
+           background-color:#ffffff;
+       }
+       
+}

@@ -3,13 +3,15 @@ document.addEventListener("DOMContentLoaded", function() { initialiseVideoPlayer
 var videoPlayer = document.getElementById("site-video");
 var playbtn = document.getElementById('play-pause-button');
 var stopbtn = document.getElementById('stop-button');
-var volup = document.getElementById('volume-inc-button');
-var voldown = document.getElementById('volume-dec-button');
 var mute = document.getElementById('mute-button');
 var replay = document.getElementById('replay-button');
+
+// font awesome variables 
 var playFont = '<i class="fa fas fa-play"></i>';
 var pauseFont = '<i class="fa fas fa-pause"></i>';
 var muteFont = '<i class="fa fas fa-volume-mute"></i>';
+var volup = '<i class="fa fas fa-volume-up"></i>';
+var voldown = '<i class="fa fas fa-volume-down"></i>'
 
 /// function hides default controls
 function initialiseVideoPlayer(){
@@ -41,19 +43,22 @@ function stopPlay(){
 }
 
 //volume function
-volup.addEventListener('click', volumeChg);
-function volumeChg(direction){
-  if(direction === volup) {
+var volbtn = document.querySelectorAll('.volume');
+for(i = 0; i < volbtn.length; i++){
+volbtn[i].addEventListener('click', volumeChg);
+function volumeChg(){
+  videoPlayer.muted = false;
+  if(this.innerHTML === volup ){
     videoPlayer.volume += videoPlayer.volume == 1 ? 0 : 0.1;
   }
-  else if(direction === voldown) {
+  else if(this.innerHTML === voldown){
     videoPlayer.volume -= (videoPlayer.volume == 0 ? 0 : 0.1);
   }
   videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
+}  
 }
 
 //mute function
-
 mute.addEventListener('click', muteToggle);
 function muteToggle(){
    if(videoPlayer.muted){
@@ -68,7 +73,6 @@ function muteToggle(){
 
 function fontColor(value){
   value.className = 'button_on';
-  console.log(value);
 }
 
 //replay function
@@ -92,8 +96,4 @@ function updateProgressBar() {
   progressBar.value = percentage;
   progressBar.innerHTML = percentage + '% played';
 }
-
-
-
-
 
